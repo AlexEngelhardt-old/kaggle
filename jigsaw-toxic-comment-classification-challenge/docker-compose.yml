@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  ynotebook:
+    build:
+      context: $PWD
+      dockerfile: Dockerfile
+    volumes:
+      - $PWD/notebooks/:/home/jovyan/work
+    ports:
+      - 8888:8888
