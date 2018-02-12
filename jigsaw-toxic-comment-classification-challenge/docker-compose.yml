@@ -6,6 +6,6 @@ services:
       context: $PWD
       dockerfile: Dockerfile
     volumes:
-      - $PWD/notebooks/:/home/jovyan/work
+      - $PWD/work/:/home/jovyan/work
     ports:
       - 8888:8888
