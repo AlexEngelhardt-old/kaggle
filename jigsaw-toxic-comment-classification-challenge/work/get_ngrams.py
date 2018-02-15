@@ -12,7 +12,7 @@ def get_ngrams(train_text, test_text, Tfidf = False, chars = False):
             analyzer='word',
             token_pattern=r'\w{2,}',
             ngram_range=(1, 2),  # min/max ngram
-            max_features=10000)
+            max_features=10000)  # the top 10000 *sorted by appearance*
         char_vectorizer = TfidfVectorizer(
             sublinear_tf=True,
             strip_accents='unicode',
